@@ -1,0 +1,31 @@
+﻿@model BasicCalApp_A00224734_GagandeepKaur.Models.Calculator
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calculator</h1>
+</div>
+<form action="Calculator" method="post">
+    <div>
+        <label for="value1">Value1: </label>
+        <input type="text" name="value1" value="@Model.value1" />
+    </div>
+    <div>
+        <label for="value2">Value2: </label>
+        <input type="text" name="value2" value="@Model.value2" />
+    </div>
+    <div>
+        <label for="result">Result: </label>
+        <input type="text" name="result" value="@Model.result" />
+    </div>
+    <div>
+        <button type="submit" value="add" name="operate">Add</button>
+        <button type="submit" value="subtract" name="operate">Subtract</button>
+        <button type="submit" value="multiply" name="operate">Multiply</button>
+        <button type="submit" value="divide" name="operate">Divide</button>
+    </div>
+    <div>
+        <label for="error">@Model.error</label>
+    </div>
+</form>
